@@ -4,6 +4,7 @@ import styles from "./AddUser.module.css";
 import Card from "../../UI/Card/Card";
 import Button from "../../UI/Button/Button";
 import ErrorModal from "../../UI/ErrorModal/ErrorModal";
+import Wrapper from "../../Helpers/Wrapper";
 
 const AddUser = (props) => {
   const [enteredUserName, setEnteredUserName] = useState("");
@@ -56,7 +57,7 @@ const AddUser = (props) => {
   }
 
   return (
-    <div>
+    <Wrapper>
       {errorCaught ? (
         <ErrorModal
           errorTitle={errorState.title}
@@ -88,7 +89,7 @@ const AddUser = (props) => {
           </form>
         </Card>
       )}
-    </div>
+      </Wrapper>
   );
 };
 
