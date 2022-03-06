@@ -12,7 +12,7 @@ const UsersList = (props) => {
         {props.users.length >= 1 ? (
           props.users.map((userItem) => {
             return (
-              <li>
+              <li key={userItem.id}>
                 {userItem.name} ({userItem.age} Years old)
               </li>
             );
